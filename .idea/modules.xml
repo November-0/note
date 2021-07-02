@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/note.iml" filepath="$PROJECT_DIR$/.idea/modules/note.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/note.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/note.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/skin/note.skin.iml" filepath="$PROJECT_DIR$/.idea/modules/skin/note.skin.iml" />
+    </modules>
+  </component>
+</project>

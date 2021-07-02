@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/win_2"
+    android:padding="10dp">
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView
+        android:layout_height="10dp"
+        android:layout_width="10dp" />-->
+    <!--Round is not as good as square-->
+
+    <ImageView
+        android:id="@+id/icon_image"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:contentDescription="@string/todo"
+        android:background="@drawable/bg_border"
+        android:src="@drawable/head"
+        android:padding="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/sign_in"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sign_comment"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="0dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="Who are you?   "
+        android:textColor="#dfe6e9"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/sign_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:letterSpacing="0.2"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="Wish nice day~"
+        android:textColor="#81ecec"
+        android:textSize="16sp"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

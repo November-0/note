@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+    <dbname value="Memorandum" />
+    <version value="16" />
+
+    <list>
+        <mapping class="com.example.memorandum.bean.Data" />
+        <mapping class="com.example.memorandum.bean.User" />
+    </list>
+</litepal>

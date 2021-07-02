@@ -1,0 +1,194 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.memorandum.activity.LoginActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolkit"
+            style="@style/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_et"
+                    android:hint="@string/you_mobile"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:paddingLeft="110dp"
+                    android:singleLine="true"
+                    android:textColorHint="#DDDDDD"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_country_code"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/email"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/country_code"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_et"
+                    android:hint="@string/input_pwd"
+                    android:inputType="textPassword"
+                    android:paddingLeft="110dp"
+                    android:singleLine="true"
+                    android:textColorHint="#DDDDDD"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/password"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:letterSpacing="0.1"
+                    android:text="@string/password"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <CheckBox
+                android:id="@+id/remember_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:letterSpacing="0.2"
+                android:text="@string/remember_pass"
+                android:textColor="@color/accent_pink"
+                android:textSize="15sp" />
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+
+            <!--</LinearLayout>-->
+            <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/password"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="密码"-->
+            <!--android:imeActionLabel="添加或注册账号"-->
+            <!--android:imeOptions="actionUnspecified"-->
+            <!--android:inputType="textPassword"-->
+            <!--android:maxLines="1"-->
+            <!--android:singleLine="true"/>-->
+
+            <!--&lt;!&ndash;-->
+            <!--android:imeActionId 设置IME动作ID，在onEditorAction中捕获判断进行逻辑操作。-->
+            <!--android:imeActionLabel  设置IME动作标签。但是不能保证一定会使用，猜想在输入法扩展的时候应该有用。-->
+            <!--android:imeOptions  设置软键盘的Enter键。-->
+            <!--&ndash;&gt;-->
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<Button-->
+            <!--android:id="@+id/email_sign_in_button"-->
+            <!--style="?android:textAppearanceSmall"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:textColor="#fff"-->
+            <!--android:text="登录"-->
+            <!--android:textStyle="bold"/>-->
+
+            <Button
+                android:id="@+id/email_sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/win_btn_1"
+                android:letterSpacing="1"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="@string/login"
+                android:textColor="@color/login_btn_text_color"
+                android:textSize="18sp"
+                android:tileMode="repeat" />
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="15dp"
+                android:background="#00ffffff"
+                android:gravity="right"
+                android:letterSpacing="0.2"
+                android:padding="0dp"
+                android:text="Join the family"
+                android:textColor="#2d3436"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+    <!--
+        控件AutoCompleteTextView 客户端保存搜索历史自动提示
+        AutoCompleteTextView常用属性
+
+        android:completionHint	            设置出现在下拉菜单中的提示标题
+        android:completionThreshold	        设置用户至少输入多少个字符才会显示提示
+        android:dropDownHorizontalOffset	下拉菜单于文本框之间的水平偏移。默认与文本框左对齐
+        android:dropDownHeight	            下拉菜单的高度
+        android:dropDownWidth	            下拉菜单的宽度
+        android:singleLine	                单行显示
+        android:dropDownVerticalOffset	    垂直偏移量
+    -->

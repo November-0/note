@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">20dp</dimen>
+    <dimen name="activity_vertical_margin">20dp</dimen>
+
+    <dimen name="min_height">115dp</dimen>
+    <!-- 菜单中间按钮的半径-->
+    <dimen name="big_circle_radius">28dp</dimen>
+    <!-- 弹出菜单按钮的半径-->
+    <dimen name="small_circle_radius">17dp</dimen>
+    <!-- 子按钮与主按钮间的距离-->
+    <dimen name="height_top_bar">20dp</dimen>
+    <dimen name="min_gap">70dp</dimen>
+</resources>

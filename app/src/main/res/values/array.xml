@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <array name="drawable_array">
+        <item>@drawable/item_selector_reminder</item>
+        <item>@drawable/item_selector_star</item>
+<!--        <item>@drawable/item_selector_pending</item>-->
+<!--        -->
+        <item>@drawable/item_selector_camera</item>
+        <item>@drawable/item_selector_picture</item>
+
+    </array>
+</resources>
