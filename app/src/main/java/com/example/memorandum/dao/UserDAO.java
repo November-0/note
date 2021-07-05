@@ -7,9 +7,6 @@ import org.litepal.crud.DataSupport;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Boogie on 2021/06/02.
- */
 
 public class UserDAO {
     private static List<User> userList = new ArrayList<>();

@@ -45,7 +45,7 @@ app内主要的几个包文件：
 # 数据库设计
 **数据库设计图**
 
-![1](C:\Users\16588\Desktop\picture\1.png)
+![1](https://github.com/November-0/note/blob/master/picture/1.png)
 
 用户信息表  User
 字段名	数据类型	可空	字段描述
@@ -70,7 +70,7 @@ User_id	INTEGER	是	外键，所属User的uid，如果是未登录状态下创�
 Activity：MainActivity
 页面展示：**主页展示**
 
-![2](C:\Users\16588\Desktop\picture\2.png)
+![2](https://github.com/November-0/note/blob/master/picture/2.png)
 
 主要功能：主页展示全部的备忘，点击左上角可以滑出菜单，最下方是一个“增加”按钮，页面上方是App名称，下方是搜索框，用户可以进行模糊搜索和下拉刷新。
 
@@ -247,7 +247,7 @@ public List<Data> queryData(String newText) {
 ```
 
 **刷新组件:**
-![9](C:\Users\16588\Desktop\picture\9.png)
+![9](https://github.com/November-0/note/blob/master/picture/9.png)
 
 主页的主体布局没有采用scrollView，而是使用SwipeRefreshLayout，这将为我们自带一个刷新控件。在这里需要为其指定一个“刷新动作”的监听器。
 
@@ -307,9 +307,9 @@ private void refreshData() {
 
 对于显示在主页的每一项都设置了一个左滑动作，可以对备忘进行收藏和删除。
 
-![3](C:\Users\16588\Desktop\picture\3.png)
+![3](https://github.com/November-0/note/blob/master/picture/3.png)
 
-![4](C:\Users\16588\Desktop\picture\4.png)
+![4](https://github.com/November-0/note/blob/master/picture/4.png)
 
 
 
@@ -433,11 +433,11 @@ case R.id.favorite: {
 
 未登录用户取消未登录用户的收藏，成功
 
-![5](C:\Users\16588\Desktop\picture\5.png)
+![5](https://github.com/November-0/note/blob/master/picture/5.png)
 
 未登录用户收藏特定用户的备忘，失败
 
-![6](C:\Users\16588\Desktop\picture\6.png)
+![6](https://github.com/November-0/note/blob/master/picture/6.png)
 
 **Glide加载图片:**备忘的右下角会显示收藏状态、备忘状态，在这里使用使用Glide向imageview中加载图片。Glide是一个快速高效的Android图片加载库,注重于平滑的滚动。
 
@@ -517,7 +517,7 @@ adapter = new DataAdapter(dataList);
 
 页面展示：主页导航栏
 
-![7](C:\Users\16588\Desktop\picture\7.png)
+![7](https://github.com/November-0/note/blob/master/picture/7.png)
 
 导航栏依靠widget.NavigationView实现，这个控件需要指定一个menu布局来使用。
 
@@ -538,7 +538,7 @@ adapter = new DataAdapter(dataList);
 
  已登录用户的信息栏
 
-![8](C:\Users\16588\Desktop\picture\8.png)
+![8](https://github.com/November-0/note/blob/master/picture/8.png)
 
 
 
@@ -582,11 +582,11 @@ Activity：MemorandumActivity
 
 未登录用户创建的备忘
 
-![10](C:\Users\16588\Desktop\picture\10.png)
+![10](https://github.com/November-0/note/blob/master/picture/10.png)
 
 某一用户创建的备忘
 
-![11](C:\Users\16588\Desktop\picture\11.png)
+![11](https://github.com/November-0/note/blob/master/picture/11.png)
 
 本页面的最上方显示了备忘的归属者。如果是未登录用户创建的，则会显示Public Note；如果是某一特定用户创建的则会显示用户的昵称。
 
@@ -662,21 +662,21 @@ if (AppGlobal.USERNAME != null && !AppGlobal.USERNAME.equals("")) {
 
 未登录用户编辑特定用户的笔记，失败提示
 
-![12](C:\Users\16588\Desktop\picture\12.png)
+![12](https://github.com/November-0/note/blob/master/picture/12.png)
 
 **调用相机、读取相册**
 
 相册、相机选择按钮
 
-![13](C:\Users\16588\Desktop\picture\13.png)
+![13](https://github.com/November-0/note/blob/master/picture/13.png)
 
 读取相册
 
-![14](C:\Users\16588\Desktop\picture\14.png)
+![14](https://github.com/November-0/note/blob/master/picture/14.png)
 
 调用相机
 
-![15](C:\Users\16588\Desktop\picture\15.png)
+![15](https://github.com/November-0/note/blob/master/picture/15.png)
 
 升级了richEditText.setOnTouchListener，添加图片的关键就是使用了富文本编辑框richEditText。把图片从相册读取到备忘中，需要先获取图片本地存储的地址，然后进行转换，之后再利用BitmapFactory.decodeStream转为bitmap追加到EditText中。
 
@@ -795,17 +795,17 @@ public static String getImageAbsolutePath(Context context, Uri imageUri) {
 
 界面展示：
 
-![16](C:\Users\16588\Desktop\picture\16.png)
+![16](https://github.com/November-0/note/blob/master/picture/16.png)
 
 登录时需要输入已创建的账号，以及对应的正确的密码，之后在数据库中进行数据的查询和匹配。如果成功则会返回主页，同时已登录用户只能查看自己创建的备忘。
 
 未登录时能查看的备忘
 
-![17](C:\Users\16588\Desktop\picture\17.png)
+![17](https://github.com/November-0/note/blob/master/picture/17.png)
 
 登录后能查看的备忘
 
-![18](C:\Users\16588\Desktop\picture\18.png)
+![18](https://github.com/November-0/note/blob/master/picture/18.png)
 
 ```java
 //登陆逻辑关键代码
@@ -839,7 +839,7 @@ f (cancel) {//非法信息
 
 除此之外，用户在登陆的时候还可以选择“Remember me”，如果之后登录成功，系统则会保存登录信息，这样下次登录的时候就可以自动填入信息了。
 
-![19](C:\Users\16588\Desktop\picture\19.png)
+![19](https://github.com/November-0/note/blob/master/picture/19.png)
 
 这实际上是使用了安卓开发常用的偏好设置来完成这项工作的。
 
@@ -865,7 +865,7 @@ if (mRememberFlag) {
 
 界面展示：注册界面
 
-![20](C:\Users\16588\Desktop\picture\20.png)
+![20](https://github.com/November-0/note/blob/master/picture/20.png)
 
 注册时需要设置昵称、设置手机号（唯一标识）、获取验证码、设置密码和正确地重复密码。遗憾的是，本App目前还没有完成验证码发送的工作，所以在这里直接点击验证码就会自动生成和填写了。
 
@@ -873,29 +873,29 @@ if (mRememberFlag) {
 
 注册示例
 
-![21](C:\Users\16588\Desktop\picture\21.png)
+![21](https://github.com/November-0/note/blob/master/picture/21.png)
 
 数据库查看新增
 
-![22](C:\Users\16588\Desktop\picture\22.png)
+![22](https://github.com/November-0/note/blob/master/picture/22.png)
 
 导航栏改变
 
-![23](C:\Users\16588\Desktop\picture\23.png)
+![23](https://github.com/November-0/note/blob/master/picture/23.png)
 
 # 主题设置功能
 
 界面展示：主题设置界面
 
-![24](C:\Users\16588\Desktop\picture\24.png)
+![24](https://github.com/November-0/note/blob/master/picture/24.png)
 
 黑暗主题
 
-![25](C:\Users\16588\Desktop\picture\25.png)
+![25](https://github.com/November-0/note/blob/master/picture/25.png)
 
 粉色主题
 
-![26](C:\Users\16588\Desktop\picture\26.png)
+![26](https://github.com/November-0/note/blob/master/picture/26.png)
 
 在选择对应的主题之后，回发送一个无序广播，收到广播的界面都会执行recreate() 重绘界面。同时切换全局主题标识。
 
@@ -978,7 +978,7 @@ this.registerReceiver(mybroad, filter);
 注意需要实现监听GooeyMenu.GooeyMenuInterface，重写menuOpen()，menuClose()，menuItemClicked(int menuNumber)方法
 UI展示：
 
-![27](C:\Users\16588\Desktop\picture\27.png)
+![27](https://github.com/November-0/note/blob/master/picture/27.png)
 
 
 **Toolbar**
@@ -986,15 +986,15 @@ UI展示：
 
 主页toolbar
 
-![28](C:\Users\16588\Desktop\picture\28.png)
+![28](https://github.com/November-0/note/blob/master/picture/28.png)
 
 编辑界面toolbar
 
-![29](C:\Users\16588\Desktop\picture\29.png)
+![29](https://github.com/November-0/note/blob/master/picture/29.png)
 
 登录界面toolbar
 
-![30](C:\Users\16588\Desktop\picture\30.png)
+![30](https://github.com/November-0/note/blob/master/picture/30.png)
 
 在使用的时候先选择要显示的控件，再者是需要重写onOptionsItemSelected方法，实现点击对应控件的行为。
 ```java
@@ -1033,9 +1033,9 @@ public boolean onOptionsItemSelected(MenuItem item) {
 
 弹窗提醒
 
-![31](C:\Users\16588\Desktop\picture\31.png)
+![31](https://github.com/November-0/note/blob/master/picture/31.png)
 
-![32](C:\Users\16588\Desktop\picture\32.png)
+![32](https://github.com/November-0/note/blob/master/picture/32.png)
 
 **添加通知**
 ```java
@@ -1162,8 +1162,8 @@ public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute) {
 
 选择日期
 
-![33](C:\Users\16588\Desktop\picture\33.png)
+![33](https://github.com/November-0/note/blob/master/picture/33.png)
 
 选择具体时间
 
-![34](C:\Users\16588\Desktop\picture\34.png)
+![34](https://github.com/November-0/note/blob/master/picture/34.png)

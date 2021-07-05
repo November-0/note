@@ -17,10 +17,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 
 import com.example.memorandum.util.CommonUtility;
-
-/**
- * Created by Boogie on 2021/06/06.
- */
+//富文本框
 
 
 public class RichEditText extends AppCompatEditText {

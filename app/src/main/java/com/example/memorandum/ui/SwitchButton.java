@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import com.example.memorandum.R;
 
 /**
- * Created by Boogie on 2021/06/06.
+ * 主题设置处的ui
  */
 
 public class SwitchButton extends FrameLayout {

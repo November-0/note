@@ -30,9 +30,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by Boogie on 2021/06/04.
- */
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     private Context context;

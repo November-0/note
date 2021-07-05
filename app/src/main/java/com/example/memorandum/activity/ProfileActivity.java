@@ -217,6 +217,7 @@ public class ProfileActivity extends RegisterActivity implements View.OnClickLis
 
     // 拍照
     private void showCamera() {
+        //弹窗
         HTAlertDialog HTAlertDialog = new HTAlertDialog(getApplicationContext(), null, new String[]{getString(R.string.attach_take_pic), getString(R.string.image_manager)});
         HTAlertDialog.init(new HTAlertDialog.OnItemClickListner() {
             @RequiresApi(api = Build.VERSION_CODES.M)

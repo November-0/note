@@ -22,7 +22,7 @@ import com.example.memorandum.util.AppGlobal;
 import com.example.memorandum.util.CommonUtility;
 
 import solid.ren.skinlibrary.base.SkinBaseActivity;
-
+//修改密码
 public class ResetPasswordActivity extends SkinBaseActivity implements View.OnClickListener {
     private EditText et_usertel;
     private EditText et_code;

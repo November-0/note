@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-
+//主页笔记的分割线
 public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     // 使用系统自带的listDivider
     // 但是功能太少

@@ -14,6 +14,7 @@ import android.view.animation.Interpolator;
 import android.widget.Scroller;
 
 /**
+ * 左滑删除与收藏ui
  * Author： liyi
  * Date：    2017/2/16.
  * SwipeItemLayout1与SwipeItemLayout2供参考，SwipeItemLayout为正式版本

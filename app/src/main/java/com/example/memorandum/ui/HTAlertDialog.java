@@ -14,6 +14,7 @@ import static com.example.memorandum.activity.RegisterActivity.getContext;
 
 
 /**
+ * 拍照时的弹窗
  * Created by huangfangyi on 2016/7/3.\
  * QQ:84543217
  */

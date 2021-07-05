@@ -30,10 +30,7 @@ import com.example.memorandum.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Boogie on 2021/06/05.
- */
-
+//菜单ui
 public class GooeyMenu extends View {
     private static final long ANIMATION_DURATION = 1000;
     private static final int DEFUALT_MENU_NO = 5;

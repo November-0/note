@@ -12,9 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Created by Boogie on 2021/06/02.
- */
+
 
 public class DataDAO {
     private static List<Data> dataList = new ArrayList<>();
