@@ -204,7 +204,7 @@ searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             if (!TextUtils.isEmpty(newText.trim())) {
                 //判定searchview的输入框是否非空
                 dataList.clear();
-                if (getTitle() == "Just R0's Note") {
+                if (getTitle() == "Just Note") {
                     dataList = dataDAO.queryUserData(newText.trim(), userId);
                 } else if (getTitle() == "Remind") {
                     dataList = dataDAO.queryUserReminder(newText.trim(), userId);
@@ -224,7 +224,7 @@ searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
         } else {
             if (!TextUtils.isEmpty(newText)) {
                 dataList.clear();
-                if (getTitle() == "Just R0's Note") {
+                if (getTitle() == "Just Note") {
                     dataList = dataDAO.queryData(newText.trim());
                 } else if (getTitle() == "Remind") {
                     dataList = dataDAO.queryReminder(newText.trim());
