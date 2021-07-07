@@ -512,7 +512,7 @@ public class ProfileActivity extends RegisterActivity implements View.OnClickLis
     }
     @Override
     protected void onDestroy() {
-        //取消注册
+        //取消
         super.onDestroy();
         unregisterReceiver(mybroad);
     }

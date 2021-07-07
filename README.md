@@ -1,5 +1,12 @@
 [TOC]
 
+# 小组分工
+
+116072019021 叶婧雯：添加查看编辑笔记、时间戳、刷新、查看个人信息
+116072019004 王林韵：主题设置、插入图片
+116072019008 王雯：模糊搜索、UI美化
+116072019025 曾家霖：注册、登录、修改密码、隔离、定时提醒、侧滑删除和收藏
+
 
 
 # 引言
@@ -45,7 +52,7 @@ app内主要的几个包文件：
 # 数据库设计
 **数据库设计图**
 
-![1](https://github.com/November-0/note/blob/master/picture/1.png)
+![1](C:\Users\16588\Desktop\picture\1.png)
 
 用户信息表  User
 字段名	数据类型	可空	字段描述
@@ -70,7 +77,7 @@ User_id	INTEGER	是	外键，所属User的uid，如果是未登录状态下创�
 Activity：MainActivity
 页面展示：**主页展示**
 
-![2](https://github.com/November-0/note/blob/master/picture/2.png)
+![2](C:\Users\16588\Desktop\picture\2.png)
 
 主要功能：主页展示全部的备忘，点击左上角可以滑出菜单，最下方是一个“增加”按钮，页面上方是App名称，下方是搜索框，用户可以进行模糊搜索和下拉刷新。
 
@@ -247,7 +254,7 @@ public List<Data> queryData(String newText) {
 ```
 
 **刷新组件:**
-![9](https://github.com/November-0/note/blob/master/picture/9.png)
+![9](C:\Users\16588\Desktop\picture\9.png)
 
 主页的主体布局没有采用scrollView，而是使用SwipeRefreshLayout，这将为我们自带一个刷新控件。在这里需要为其指定一个“刷新动作”的监听器。
 
@@ -307,9 +314,9 @@ private void refreshData() {
 
 对于显示在主页的每一项都设置了一个左滑动作，可以对备忘进行收藏和删除。
 
-![3](https://github.com/November-0/note/blob/master/picture/3.png)
+![3](C:\Users\16588\Desktop\picture\3.png)
 
-![4](https://github.com/November-0/note/blob/master/picture/4.png)
+![4](C:\Users\16588\Desktop\picture\4.png)
 
 
 
@@ -433,11 +440,11 @@ case R.id.favorite: {
 
 未登录用户取消未登录用户的收藏，成功
 
-![5](https://github.com/November-0/note/blob/master/picture/5.png)
+![5](C:\Users\16588\Desktop\picture\5.png)
 
 未登录用户收藏特定用户的备忘，失败
 
-![6](https://github.com/November-0/note/blob/master/picture/6.png)
+![6](C:\Users\16588\Desktop\picture\6.png)
 
 **Glide加载图片:**备忘的右下角会显示收藏状态、备忘状态，在这里使用使用Glide向imageview中加载图片。Glide是一个快速高效的Android图片加载库,注重于平滑的滚动。
 
@@ -517,7 +524,7 @@ adapter = new DataAdapter(dataList);
 
 页面展示：主页导航栏
 
-![7](https://github.com/November-0/note/blob/master/picture/7.png)
+![7](C:\Users\16588\Desktop\picture\7.png)
 
 导航栏依靠widget.NavigationView实现，这个控件需要指定一个menu布局来使用。
 
@@ -538,7 +545,7 @@ adapter = new DataAdapter(dataList);
 
  已登录用户的信息栏
 
-![8](https://github.com/November-0/note/blob/master/picture/8.png)
+![8](C:\Users\16588\Desktop\picture\8.png)
 
 
 
@@ -582,11 +589,11 @@ Activity：MemorandumActivity
 
 未登录用户创建的备忘
 
-![10](https://github.com/November-0/note/blob/master/picture/10.png)
+![10](C:\Users\16588\Desktop\picture\10.png)
 
 某一用户创建的备忘
 
-![11](https://github.com/November-0/note/blob/master/picture/11.png)
+![11](C:\Users\16588\Desktop\picture\11.png)
 
 本页面的最上方显示了备忘的归属者。如果是未登录用户创建的，则会显示Public Note；如果是某一特定用户创建的则会显示用户的昵称。
 
@@ -662,21 +669,21 @@ if (AppGlobal.USERNAME != null && !AppGlobal.USERNAME.equals("")) {
 
 未登录用户编辑特定用户的笔记，失败提示
 
-![12](https://github.com/November-0/note/blob/master/picture/12.png)
+![12](C:\Users\16588\Desktop\picture\12.png)
 
 **调用相机、读取相册**
 
 相册、相机选择按钮
 
-![13](https://github.com/November-0/note/blob/master/picture/13.png)
+![13](C:\Users\16588\Desktop\picture\13.png)
 
 读取相册
 
-![14](https://github.com/November-0/note/blob/master/picture/14.png)
+![14](C:\Users\16588\Desktop\picture\14.png)
 
 调用相机
 
-![15](https://github.com/November-0/note/blob/master/picture/15.png)
+![15](C:\Users\16588\Desktop\picture\15.png)
 
 升级了richEditText.setOnTouchListener，添加图片的关键就是使用了富文本编辑框richEditText。把图片从相册读取到备忘中，需要先获取图片本地存储的地址，然后进行转换，之后再利用BitmapFactory.decodeStream转为bitmap追加到EditText中。
 
@@ -795,17 +802,17 @@ public static String getImageAbsolutePath(Context context, Uri imageUri) {
 
 界面展示：
 
-![16](https://github.com/November-0/note/blob/master/picture/16.png)
+![16](C:\Users\16588\Desktop\picture\16.png)
 
 登录时需要输入已创建的账号，以及对应的正确的密码，之后在数据库中进行数据的查询和匹配。如果成功则会返回主页，同时已登录用户只能查看自己创建的备忘。
 
 未登录时能查看的备忘
 
-![17](https://github.com/November-0/note/blob/master/picture/17.png)
+![17](C:\Users\16588\Desktop\picture\17.png)
 
 登录后能查看的备忘
 
-![18](https://github.com/November-0/note/blob/master/picture/18.png)
+![18](C:\Users\16588\Desktop\picture\18.png)
 
 ```java
 //登陆逻辑关键代码
@@ -839,7 +846,7 @@ f (cancel) {//非法信息
 
 除此之外，用户在登陆的时候还可以选择“Remember me”，如果之后登录成功，系统则会保存登录信息，这样下次登录的时候就可以自动填入信息了。
 
-![19](https://github.com/November-0/note/blob/master/picture/19.png)
+![19](C:\Users\16588\Desktop\picture\19.png)
 
 这实际上是使用了安卓开发常用的偏好设置来完成这项工作的。
 
@@ -865,7 +872,7 @@ if (mRememberFlag) {
 
 界面展示：注册界面
 
-![20](https://github.com/November-0/note/blob/master/picture/20.png)
+![20](C:\Users\16588\Desktop\picture\20.png)
 
 注册时需要设置昵称、设置手机号（唯一标识）、获取验证码、设置密码和正确地重复密码。遗憾的是，本App目前还没有完成验证码发送的工作，所以在这里直接点击验证码就会自动生成和填写了。
 
@@ -873,29 +880,29 @@ if (mRememberFlag) {
 
 注册示例
 
-![21](https://github.com/November-0/note/blob/master/picture/21.png)
+![21](C:\Users\16588\Desktop\picture\21.png)
 
 数据库查看新增
 
-![22](https://github.com/November-0/note/blob/master/picture/22.png)
+![22](C:\Users\16588\Desktop\picture\22.png)
 
 导航栏改变
 
-![23](https://github.com/November-0/note/blob/master/picture/23.png)
+![23](C:\Users\16588\Desktop\picture\23.png)
 
 # 主题设置功能
 
 界面展示：主题设置界面
 
-![24](https://github.com/November-0/note/blob/master/picture/24.png)
+![24](C:\Users\16588\Desktop\picture\24.png)
 
 黑暗主题
 
-![25](https://github.com/November-0/note/blob/master/picture/25.png)
+![25](C:\Users\16588\Desktop\picture\25.png)
 
 粉色主题
 
-![26](https://github.com/November-0/note/blob/master/picture/26.png)
+![26](C:\Users\16588\Desktop\picture\26.png)
 
 在选择对应的主题之后，回发送一个无序广播，收到广播的界面都会执行recreate() 重绘界面。同时切换全局主题标识。
 
@@ -978,7 +985,7 @@ this.registerReceiver(mybroad, filter);
 注意需要实现监听GooeyMenu.GooeyMenuInterface，重写menuOpen()，menuClose()，menuItemClicked(int menuNumber)方法
 UI展示：
 
-![27](https://github.com/November-0/note/blob/master/picture/27.png)
+![27](C:\Users\16588\Desktop\picture\27.png)
 
 
 **Toolbar**
@@ -986,15 +993,15 @@ UI展示：
 
 主页toolbar
 
-![28](https://github.com/November-0/note/blob/master/picture/28.png)
+![28](C:\Users\16588\Desktop\picture\28.png)
 
 编辑界面toolbar
 
-![29](https://github.com/November-0/note/blob/master/picture/29.png)
+![29](C:\Users\16588\Desktop\picture\29.png)
 
 登录界面toolbar
 
-![30](https://github.com/November-0/note/blob/master/picture/30.png)
+![30](C:\Users\16588\Desktop\picture\30.png)
 
 在使用的时候先选择要显示的控件，再者是需要重写onOptionsItemSelected方法，实现点击对应控件的行为。
 ```java
@@ -1033,9 +1040,9 @@ public boolean onOptionsItemSelected(MenuItem item) {
 
 弹窗提醒
 
-![31](https://github.com/November-0/note/blob/master/picture/31.png)
+![31](C:\Users\16588\Desktop\picture\31.png)
 
-![32](https://github.com/November-0/note/blob/master/picture/32.png)
+![32](C:\Users\16588\Desktop\picture\32.png)
 
 **添加通知**
 ```java
@@ -1162,8 +1169,452 @@ public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute) {
 
 选择日期
 
-![33](https://github.com/November-0/note/blob/master/picture/33.png)
+![33](C:\Users\16588\Desktop\picture\33.png)
 
 选择具体时间
 
-![34](https://github.com/November-0/note/blob/master/picture/34.png)
+![34](C:\Users\16588\Desktop\picture\34.png)
+
+# 查看个人信息
+点击导航栏的头像可以查看个人信息，可以更换头像和昵称，以及查看笔记、收藏的笔记、带图片的笔记的数量
+![36](C:\Users\16588\Desktop\picture\36.png)
+![37](C:\Users\16588\Desktop\picture\37.png)
+![38](C:\Users\16588\Desktop\picture\38.png)
+```java
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.re_avatar:
+                showCamera();
+                break;
+            case R.id.re_name:
+
+                final EditText et = new EditText(this);
+                et.setText(AppGlobal.NAME);
+                AlertDialog alertDialog = new AlertDialog.Builder(this)
+                        .setTitle("Name change?")
+//                      .setIcon(android.R.drawable.ic_dialog_info)
+                        .setView(et)
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                String input = et.getText().toString();
+                                if (input.equals("")) {
+                                    Toast.makeText(getApplicationContext(), "Empty name..." + input, Toast.LENGTH_LONG).show();
+                                } else {
+                                    userDAO.resetNickname(AppGlobal.USERNAME, input);
+                                    AppGlobal.NAME = input;
+                                    tv_name.setText(AppGlobal.NAME);
+                                }
+                            }
+                        })
+                        .setNegativeButton("Cancel", null).create();
+//                      alertDialog.getButton(alertDialog.BUTTON_NEGATIVE).setLeft(0);
+                alertDialog.show();
+
+                break;
+//            case R.id.re_fxid:
+//                if (TextUtils.isEmpty(userJson.getString(HTConstant.JSON_KEY_FXID))) {
+//                    startActivity(new Intent(getActivity(), ProfileUpdateActivity.class)
+//                            .putExtra("type", ProfileUpdateActivity.TYPE_FXID));
+//                }
+//                break;
+            case R.id.re_memo:
+                break;
+            case R.id.re_pending:
+                break;
+            case R.id.re_star:
+                break;
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                super.onBackPressed();
+                Intent it = new Intent();
+                it.setClass(ProfileActivity.this, MainActivity.class);
+                it.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(it);
+                finish();
+        }
+        return true;
+    }
+
+    // 拍照
+    private void showCamera() {
+        //弹窗
+        HTAlertDialog HTAlertDialog = new HTAlertDialog(getApplicationContext(), null, new String[]{getString(R.string.attach_take_pic), getString(R.string.image_manager)});
+        HTAlertDialog.init(new HTAlertDialog.OnItemClickListner() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
+            @Override
+            public void onClick(int position) {
+                switch (position) {
+                    case 0:
+                        File outputImage = new File(getExternalCacheDir(), UUID.randomUUID().toString() + ".jpg");
+                        AppGlobal.currentImagePath = outputImage.getAbsolutePath();
+//                        Log.d("RegisterActivity", outputImagePath);
+//                        Toast.makeText(RegisterActivity.this, outputImagePath, Toast.LENGTH_SHORT).show();
+
+                        try {
+                            if (outputImage.exists()) {
+                                outputImage.delete();
+                            }
+                            outputImage.createNewFile();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        if (Build.VERSION.SDK_INT >= 24) {
+                            //在拿到uri之后进行版本判断大于等于24（即Android7.0）用最新的获取路径方式，否则用之前的方式
+                            head_imageUri = FileProvider.getUriForFile(ProfileActivity.this, "com.exmaple.memorandum.fileprovider", outputImage);
+                        } else {
+                            head_imageUri = Uri.fromFile(outputImage);
+                        }
+                        ActivityCompat.requestPermissions(ProfileActivity.this,
+                                new String[]{
+                                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                        Manifest.permission.CAMERA
+                                }, 200);
+                        openCamera();
+                        break;
+//
+                    case 1:
+                        if (ContextCompat.checkSelfPermission(ProfileActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                            ActivityCompat.requestPermissions(ProfileActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                        } else {
+                            openAlbum();
+                        }
+                        break;
+//
+                }
+            }
+        });
+    }
+
+    private void openCamera() {
+        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, head_imageUri);
+        startActivityForResult(intent, TAKE_PHOTO);
+    }
+
+    private void openAlbum() {
+        // Intent getImage = new Intent(Intent.ACTION_GET_CONTENT);
+        // 调用相册
+        // 4.41之后不可行，改为ACTION_PICK
+        // 0608: 改为ACTION_PICK之后路径会变成google的路径（如果安装了google商店）
+        // 继续使用ACTION_GET_CONTENT，但是需要修改"content".equalsIgnoreCase(uri.getScheme())项的转换方式
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        startActivityForResult(intent, CHOOSE_PHOTO);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case 1:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    openAlbum();
+                    openCamera();
+                } else {
+                    Toast.makeText(this, "You denied the permission", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            default:
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case TAKE_PHOTO:
+                if (resultCode == RESULT_OK) {
+                    try {
+                        Bitmap originalPhotoBitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(head_imageUri));
+
+//                        int bitmapHeight = originalPhotoBitmap.getHeight();
+//                        int bitmapWidth = originalPhotoBitmap.getWidth();
+//                        double proportion = (double) bitmapHeight / (double) bitmapWidth;
+//                        int resetWidth = 2000;
+//                        int resetHeight = (int) (resetWidth * proportion);
+
+                        Bitmap bitmap = CommonUtility.resizeImage(originalPhotoBitmap, 200, 200);
+
+                        iv_avatar.setImageBitmap(bitmap);
+                        // AppGlobal.INSERT_IMAGE = true;
+                        userDAO.updateImagePath(AppGlobal.currentImagePath, AppGlobal.USERNAME);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+                break;
+            case CHOOSE_PHOTO:
+                if (resultCode == RESULT_OK) {
+                    if (Build.VERSION.SDK_INT >= 19) {
+                        Log.d("V", "high");
+                        handleImageOnKitKat(data);
+                    } else {
+                        Log.d("V", "low");
+                        handleImageBeforeKitKat(data);
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void handleImageBeforeKitKat(Intent data) {
+        Uri uri = data.getData();
+        String imagePath = getImagePath(uri, null);
+        displayImage(imagePath);
+    }
+
+    /**
+     * Google相册图片获取路径
+     **/
+    private static Uri getImageUrlWithAuthority(Context context, Uri uri) {
+        InputStream is = null;
+
+        if (uri.getAuthority() != null) {
+            try {
+                is = context.getContentResolver().openInputStream(uri);
+                Bitmap bmp = BitmapFactory.decodeStream(is);
+                //return writeToTempImageAndGetPathUri(context, bmp).toString();
+                return writeToTempImageAndGetPathUri(context, bmp);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (is != null) {
+                        is.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return null;
+    }
+
+    private static Uri writeToTempImageAndGetPathUri(Context inContext, Bitmap inImage) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+        return Uri.parse(path);
+        // 有bug 会额外生成一张略缩图到相册
+//        ContentValues values = new ContentValues();
+//        values.put(MediaStore.Images.Media.DATA, String.valueOf(inImage));
+//        values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
+//        Uri ans = inContext.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+//        Log.d("R0 Insert", String.valueOf(ans)) ;
+//        return ans ;
+//        Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+//        intent.setData(ans);
+//        inContext.sendBroadcast(intent);
+//        return ans ;
+    }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    private void handleImageOnKitKat(@NonNull Intent data) {
+        String imagePath = null;
+        Uri uri = data.getData();
+        Log.d("URI ANS", String.valueOf(uri));
+        Log.d("URI ANS", String.valueOf(DocumentsContract.isDocumentUri(this, uri)));
+        if (DocumentsContract.isDocumentUri(this, uri)) {
+            String docId = DocumentsContract.getDocumentId(uri);
+            if ("com.android.providers.media.documents".equals(uri.getAuthority())) {
+                String id = docId.split(":")[1];
+                String selection = MediaStore.Images.Media._ID + "=" + id;
+                imagePath = getImagePath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection);
+            } else if ("com.android.providers.downloads.documents".equals(uri.getAuthority())) {
+                Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://download/public_downloads"), Long.valueOf(docId));
+                imagePath = getImagePath(contentUri, null);
+            } else if ("content".equalsIgnoreCase(uri.getScheme())) {
+                // imagePath = getImagePath(uri, null);
+                if (isExternalStorageDocument(uri)) {
+//                Log.i(TAG,"isExternalStorageDocument***"+uri.toString());
+//                Log.i(TAG,"docId***"+docId);
+//                Test print：
+//                isExternalStorageDocument***content://com.android.externalstorage.documents/document/primary%3ATset%2FROC2018421103253.wav
+//                docId***primary:Test/ROC2018421103253.wav
+                    final String[] split = docId.split(":");
+                    final String type = split[0];
+
+                    if ("primary".equalsIgnoreCase(type)) {
+                        imagePath = Environment.getExternalStorageDirectory() + "/" + split[1];
+                    }
+                }
+            } else if (isDownloadsDocument(uri)) {
+//                Log.i(TAG,"isDownloadsDocument***"+uri.toString());
+                final String id = DocumentsContract.getDocumentId(uri);
+                final Uri contentUri = ContentUris.withAppendedId(
+                        Uri.parse("content://downloads/public_downloads"), Long.valueOf(id));
+                imagePath = getDataColumn(this, contentUri, null, null);
+            } else if ("file".equalsIgnoreCase(uri.getScheme())) {
+                imagePath = uri.getPath();
+            }
+            Log.d("IMAGE ANS", imagePath);
+            displayImage(imagePath);
+        } else {
+            if ("com.google.android.apps.photos.contentprovider".equals(uri.getAuthority())) {
+                //imagePath = uri.getLastPathSegment();
+                uri = getImageUrlWithAuthority(this, uri);
+                imagePath = getImagePath(uri, null);
+                Log.d("IMAGE ANS", imagePath);
+                displayImage(imagePath);
+            } else {
+                Log.d("IMAGE ANS", "WTF");
+            }
+        }
+    }
+
+//    public boolean isExternalStorageDocument(Uri uri) {
+//        return "com.android.externalstorage.documents".equals(uri.getAuthority());
+//    }
+
+//    public boolean isDownloadsDocument(Uri uri) {
+//        return "com.android.providers.downloads.documents".equals(uri.getAuthority());
+//    }
+
+//    public boolean isMediaDocument(Uri uri) {
+//        return "com.android.providers.media.documents".equals(uri.getAuthority());
+//    }
+
+    private void displayImage(String imagePath) {
+        if (imagePath != null) {
+            Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
+            File albumImage = new File(getExternalCacheDir(), UUID.randomUUID().toString() + ".jpg");
+            String albumImagePath = albumImage.getAbsolutePath();
+            AppGlobal.currentImagePath = albumImagePath;
+            Log.d("RegisterActivity", albumImagePath);
+            Toast.makeText(this, albumImagePath, Toast.LENGTH_SHORT).show();
+            try {
+                if (albumImage.exists()) {
+                    albumImage.delete();
+                }
+                FileOutputStream out;
+                out = new FileOutputStream(albumImage);
+                if (bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out)) {
+                    out.flush();
+                    out.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            iv_avatar.setImageBitmap(bitmap);
+            userDAO.updateImagePath(AppGlobal.currentImagePath, AppGlobal.USERNAME);
+        } else {
+            Toast.makeText(this, "failed to get image", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private String getImagePath(Uri uri, String selection) {
+        String path = null;
+        Cursor cursor = getContentResolver().query(uri, null, selection, null, null);
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                /**
+                 * 这种方法调用图库并获取图片在android4.4版本之前是可行的，但是之后就不可行了
+                 * 根本原因是前者和后者返回的URI已经不是同一个了，前者URI中包含了文件的绝对路径，是有_data的，但是后者URI就没有了。所以拿不到
+                 * <4.4 URI:content://media/external/images/media/164 含有文件的绝对路径
+                 *
+                 * >4.4URI ：content://com.android.providers.media.documents/document/image:3951，只有文件的相对编号
+                 *
+                 * 两者返回的内容也有所不同
+                 * 原文链接：https://blog.csdn.net/qq_32534441/article/details/103526406
+                 */
+                //path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA));
+                path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+            }
+            cursor.close();
+        }
+        Log.d("IMAGE", path);
+        return path;
+    }
+
+```
+
+
+
+# 修改密码
+如果忘记了密码，可以通过手机号获取验证码来修改密码
+![35](C:\Users\16588\Desktop\picture\35.png)
+
+
+```java
+    private void attemptReset() {
+        et_usertel.setError(null);
+        et_code.setError(null);
+        et_password.setError(null);
+        et_password_confirm.setError(null);
+
+        String userName = et_usertel.getText().toString().trim();
+        String code = et_code.getText().toString().trim();
+        String password = et_password.getText().toString().trim();
+        String password_confirm = et_password_confirm.getText().toString().trim();
+
+        boolean cancel = false;
+        View focusView = null;
+
+        if (TextUtils.isEmpty(userName)) {
+            et_usertel.setError("Phone is empty.");
+            focusView = et_usertel;
+            cancel = true;
+        }
+
+        if (!userName.equals(AppGlobal.USERNAME)) {
+            et_usertel.setError("Phone error.");
+            focusView = et_usertel;
+            cancel = true;
+        }
+
+        if (TextUtils.isEmpty(code)) {
+            et_code.setError("Where is the verification code ?");
+            focusView = et_code;
+            cancel = true;
+        }
+        if (TextUtils.isEmpty(password)) {
+            et_password.setError("Password is empty.");
+            focusView = et_password;
+            cancel = true;
+        }
+        if (TextUtils.isEmpty(password_confirm)) {
+            et_password_confirm.setError("Do not forget to confirm.");
+            focusView = et_password_confirm;
+            cancel = true;
+        }
+
+        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+            et_password.setError("The password requires at least four digits.");
+            focusView = et_password;
+            cancel = true;
+        }
+        if (!password.equals(password_confirm)) {
+            et_password_confirm.setError("The two passwords entered are not consistent.");
+            focusView = et_password_confirm;
+            cancel = true;
+        }
+
+        if (cancel) {
+            focusView.requestFocus();
+        } else {
+            UserDAO userDAO = new UserDAO();
+            boolean isSuccess = false;
+            if (!userDAO.checkUsername(userName)) {
+                et_usertel.setError("User not found.");
+            } else {
+                isSuccess = userDAO.checkPassword(userName, password);
+                if (isSuccess) {
+                    userDAO.resetPassword(userName, password);
+                    Toast.makeText(ResetPasswordActivity.this, "Successfully.", Toast.LENGTH_SHORT).show();
+                    finish();
+                } else {
+                    Toast.makeText(ResetPasswordActivity.this, "Isn't this the same as the original one?", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        }
+    }
+```
+
